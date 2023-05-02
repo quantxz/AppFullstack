@@ -1,4 +1,4 @@
-yarn add @types/express @types/node @types/cors @types/knex ts-node nodemon express sucrase typescript cors -D
+yarn add @types/express @types/node @types/cors @types/knex ts-node nodemon express sucrase typescript cors prisma sqlite sqlite3 -D
 
 
 ts configs {
