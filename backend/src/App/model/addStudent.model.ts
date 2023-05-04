@@ -1,5 +1,6 @@
 import { knex } from "../configs/knexConfigs";
 import { openDB } from "../configs/sqliteConfigs";
+import jwt from 'jsonwebtoken'
 
 interface studentsData {
     age: number,

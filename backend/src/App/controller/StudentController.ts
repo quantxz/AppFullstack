@@ -1,10 +1,11 @@
 import { Request, Response } from "express";
-import { createStudent } from "../model/addAluno.model";
+import { createStudent } from "../model/addStudent.model";
 import { knex } from "../configs/knexConfigs";
 import { updateStudents } from "../model/updateStudent.model";
 import { deleteStudent } from "../model/deleteStudent.model";
+import jwt from 'jsonwebtoken'
 
-class Controller {
+class studentsController {
 
     public async showAllStudents(req: Request, res: Response) {
         return res.json(
@@ -52,4 +53,4 @@ class Controller {
 
 }
 
-export default new Controller
+export default new studentsController

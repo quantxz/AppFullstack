@@ -1,3 +1,4 @@
 node_modules
 # Keep environment variables out of version control
 .env
+C:\Users\canal\OneDrive\Área de Trabalho\App\backend\src\App\configs\authConfigs.ts

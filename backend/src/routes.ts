@@ -1,13 +1,17 @@
 import { Router } from "express";
-import Controller from "./App/controller/StudentController";
+import studentsController from "./App/controller/StudentController";
+import loginController from './App/controller/loginController'
 import { openDB } from "./App/configs/sqliteConfigs";
+import { authMiddleware } from './App/middlewares/authMiddleware'
 
 openDB()
 const routes: Router = Router();
 
-routes.get('/', Controller.showAllStudents)
-routes.post('/', Controller.createStudent)
-routes.put('/:id', Controller.updateStudent)
-routes.delete('/:id', Controller.deleteStudent)
+routes.get('/', authMiddleware, studentsController.showAllStudents)
+routes.post('/', studentsController.createStudent)
+routes.put('/:id', studentsController.updateStudent)
+routes.delete('/:id', studentsController.deleteStudent)
+
+routes.post('/login', loginController.LoginStudent)
 
 export default routes;
